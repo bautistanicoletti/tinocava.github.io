@@ -3,8 +3,8 @@
 
 /* Variables */
 :root {
-    --black-color: #0E0F11;
-    --black-color-5: rgb(14, 15, 17, 0.05);
+    --black-color: #0A0A0A;
+    --black-color-5: rgb(10, 10, 10, 0.05);
     --white-color: #F4F3F1;
     --white-color-75: rgb(244, 243, 241, 0.75);
     --white-color-50: rgb(244, 243, 241, 0.5);
@@ -19,6 +19,7 @@
 
     --primary-semibold-weight: 600;
     --secundary-medium-weight: 500;
+    --secundary-semibold-weight: 600;
 
     --big-border-radius: 999px;
     --small-border-radius: 9px;
@@ -31,15 +32,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 1px dashed red; */
 }
 
 body {
-    background-color: var(--black-color);
     color: var(--white-color);
     font-family: var(--secundary-font);
     font-weight: var(--secundary-medium-weight);
-    overflow-x: hidden;
     cursor: default;
+}
+
+.background_video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 html, body {
@@ -167,7 +177,8 @@ small {
 }
 
 .text__center .pretitle {
-    font-family: var(--secundary-medium-weight);
+    font-family: var(--secundary-font);
+    font-weight: var(--secundary-semibold-weight);
     text-transform: uppercase;
     color: var(--accent-color-75);
     margin-bottom: 16px;
@@ -180,7 +191,7 @@ small {
 }
 
 .text__center .text {
-    font-weight: var(--secundary-medium-weights);
+    font-weight: var(--secundary-medium-weight);
     max-width: 480px;
     margin-top: 8px;
     text-wrap: pretty;
@@ -356,34 +367,47 @@ small {
 
 .services .carousel__services {
     display: flex;
-    flex-wrap: nowrap;
-    align-content: center;
-    gap: 16px;
-    padding: 0 20px;
-    width: 100%;
-    margin-top: 48px;
+    margin: 48px auto;
+    width: 90%;
     overflow-x: auto;
-    transition: scrollLeft .3s ease;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-right: 1em;
+    z-index: -1;
 }
 
 .services .carousel__services::-webkit-scrollbar {
     display: none;
 }
 
-.services .carousel__services .card_service {
+.services .carousel__services .carousel_group {
     display: flex;
-    flex-direction: column;
-    text-align: left;
+    align-content: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 32s infinite linear;
+}
+
+.services .carousel__services .carousel_group .card_service {
+    flex: 0 0 min(450px, 85vw); 
     padding: 32px 24px;
-    min-width: 500px;
-    width: 100%;
+    text-align: left;
     box-shadow: 0 0 0;
 }
 
+/* Carousel Animtaion */
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
+
+/* Min Width card: 500px */
+
 .services .carousel__services .card_service .img_card {
+    width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    display: flex;
     border: 2px solid var(--accent-color-5);
     border-radius: var(--small-border-radius);
 }
@@ -686,6 +710,10 @@ small {
     display: flex;
 }
 
+.question__card.active header {
+    border-bottom: 1px solid var(--accent-color-5);
+}
+
 .question__card.active header svg {
     rotate: 180deg;
 }
@@ -822,10 +850,6 @@ small {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .conditions .grid__social_media {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .about {
         display: flex;
         flex-direction: column-reverse;
@@ -843,10 +867,6 @@ small {
 }
 /* Tablet */
 @media screen and (max-width: 900px) {
-    .header {
-        background-color: var(--black-color);
-    }
-
     .header .nav__header {
         display: none;
     }
@@ -901,10 +921,6 @@ small {
 }
 /* Phone */
 @media screen and (max-width: 600px) {
-    .services .carousel__services .card_service {
-        min-width: 400px;
-    }
-
     .conditions .grid__models {
         grid-template-columns: 1fr;
     }

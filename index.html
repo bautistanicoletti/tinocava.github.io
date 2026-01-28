@@ -33,6 +33,9 @@
     <!-- Icons Lucidev -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BVWT0RREMH"></script>
     <script>
@@ -56,7 +59,8 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-
+    <div class="fixed top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(192,169,130,0.3),rgba(255,255,255,0))]"></div>
+    
     <header class="header">
         <div class="container__header">
             <a href="index.html" class="logo">
@@ -96,7 +100,7 @@
     </header>
 
     <main>
-        <section class="hero" id="hero">
+        <section class="hero" id="">
             <div class="container__hero">
 
                 <small class="social_trust glassmorphism-gold">+7 Negocios escalados con omnipresencia digital</small>
@@ -139,46 +143,80 @@
             </div>
 
             <div class="carousel__services" id="carousel-services">
-
-                <div class="card_service glassmorphism-gold">
-                    <img src="https://imgs.search.brave.com/8vkkgQ6y8tS-K5D6mqL9T19De3iNh1ADdUo3IsdMEWo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/aW5ub3ZhY2lvbmRp/Z2l0YWwzNjAuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIz/LzA5LzIyMTQzMTAy/L0VzdHJhdGVnaWEt/ZGlnaXRhbC5qcGc" alt="Estrategia" class="img_card">
-                    <h4>Estrategia</h4>
-                    <p>
-                        Diseñamos un plan de omnipresencia enfocado en aumentar exposición frente a tu cliente ideal, con objetivos claros de crecimiento y retorno esperado (x2 o x3).
-                    </p>
+                <div class="carousel_group">
+                    <article class="card_service glassmorphism-gold">
+                        <img src="https://imgs.search.brave.com/8vkkgQ6y8tS-K5D6mqL9T19De3iNh1ADdUo3IsdMEWo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/aW5ub3ZhY2lvbmRp/Z2l0YWwzNjAuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIz/LzA5LzIyMTQzMTAy/L0VzdHJhdGVnaWEt/ZGlnaXRhbC5qcGc" alt="Estrategia" class="img_card" loading="lazy">
+                        <h4>Estrategia</h4>
+                        <p>
+                            Diseñamos un plan de omnipresencia enfocado en aumentar exposición frente a tu cliente ideal, con objetivos claros de crecimiento y retorno esperado (x2 o x3).
+                        </p>
+                    </article>
+                    <article class="card_service glassmorphism-gold">
+                        <img src="https://imgs.search.brave.com/bx288EeWRQywMeI0rRdwk8WX5RgftcWHvM-0Lv5x7RY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTgw/NTY4MDczMi9lcy9m/b3RvL292ZXItc2hv/dWxkZXItdmlldy1v/Zi1wcm9mZXNzaW9u/YWwtdmlkZW8tY2Ft/ZXJhLWZpbG1pbmct/YW4taW50ZXJ2aWV3/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz0yeWlXZnRHd0Rn/aTc0UncyYVUzRUVT/b21fVS0tX21DR0xy/ZGR5ak50REpRPQ" alt="Filmación" class="img_card" loading="lazy">
+                        <h4>Filmación</h4>
+                        <p>
+                            Producción de contenido orientada a generar presencia diaria, autoridad y ventas en tu negocio.
+                        </p>
+                    </article>
+                    <article class="card_service glassmorphism-gold">
+                        <img src="https://imgs.search.brave.com/GcAhBUxWK5n1IIJK4N9TEzjl16gTbVh06nbpVLMlsB0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZWku/ZXMvd3AtY29udGVu/dC91cGxvYWRzL2N1/cnNvLWRlLWVkaWNp/b24tZGUtdmlkZW8t/b25saW5lLW1vYmls/ZS5qcGc" alt="Edición" class="img_card" loading="lazy">
+                        <h4>Edición</h4>
+                        <p>
+                            Edición optimizada para volumen, retención y adaptación a cada plataforma, permitiendo escalar sin depender de un solo formato.
+                        </p>
+                    </article>
+                    <article class="card_service glassmorphism-gold" loading="lazy">
+                        <img src="https://imgs.search.brave.com/0hSbE2N4jUr15_U6FED5xBK0g526KXvnh6Zv0omHlN4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/Zm90b3MtcHJlbWl1/bS9jb25jZXB0by1y/ZWRlcy1zb2NpYWxl/cy10ZWxlZm9uby1p/bnRlbGlnZW50ZS1t/YW5vXzIzLTIxNTAy/MDgyNjEuanBnP3Nl/bXQ9YWlzX2h5YnJp/ZCZ3PTc0MCZxPTgw" alt="Distribución" class="img_card">
+                        <h4>Distribución</h4>
+                        <p>
+                            Sistema de multicuentas (5 a 10 cuentas) distribuidas en: Instagram, TikTok, YouTube shorts y Facebook para predominar en tu nicho.
+                        </p>
+                    </article>
+                    <article class="card_service glassmorphism-gold">
+                        <img src="https://imgs.search.brave.com/5a9yYpuSAydAFD8j9FMGBaAUMIcn2vFnoQEK5pPApO8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/Zm90b3MtcHJlbWl1/bS9wcmltZXItcGxh/bm8taG9tYnJlLXF1/ZS10cmFiYWphLWNv/bXB1dGFkb3JhLXBv/cnRhdGlsLWZpbmFu/emFzLW8tY2VvLWdy/YWZpY28tYW5hbGlz/aXMtbmVnb2Npb3Mt/ZXN0cmF0ZWdpYV80/NTE2MzUtMjEzLmpw/Zz9zZW10PWFpc19o/eWJyaWQmdz03NDAm/cT04MA" alt="Medición" class="img_card" loading="lazy">
+                        <h4>Medición</h4>
+                        <p>
+                            Seguimiento de métricas de exposición útil, consultas y oportunidades generadas, con optimización constante.
+                        </p>
+                    </article>
                 </div>
-
-                <div class="card_service glassmorphism-gold">
-                    <img src="https://imgs.search.brave.com/bx288EeWRQywMeI0rRdwk8WX5RgftcWHvM-0Lv5x7RY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTgw/NTY4MDczMi9lcy9m/b3RvL292ZXItc2hv/dWxkZXItdmlldy1v/Zi1wcm9mZXNzaW9u/YWwtdmlkZW8tY2Ft/ZXJhLWZpbG1pbmct/YW4taW50ZXJ2aWV3/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz0yeWlXZnRHd0Rn/aTc0UncyYVUzRUVT/b21fVS0tX21DR0xy/ZGR5ak50REpRPQ" alt="Filmación" class="img_card">
-                    <h4>Filmación</h4>
-                    <p>
-                        Producción de contenido orientada a generar presencia diaria, autoridad y ventas en tu negocio.
-                    </p>
-                </div>
-
-                <div class="card_service glassmorphism-gold">
-                    <img src="https://imgs.search.brave.com/GcAhBUxWK5n1IIJK4N9TEzjl16gTbVh06nbpVLMlsB0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZWku/ZXMvd3AtY29udGVu/dC91cGxvYWRzL2N1/cnNvLWRlLWVkaWNp/b24tZGUtdmlkZW8t/b25saW5lLW1vYmls/ZS5qcGc" alt="Edición" class="img_card">
-                    <h4>Edición</h4>
-                    <p>
-                        Edición optimizada para volumen, retención y adaptación a cada plataforma, permitiendo escalar sin depender de un solo formato.
-                    </p>
-                </div>
-
-                <div class="card_service glassmorphism-gold">
-                    <img src="https://imgs.search.brave.com/0hSbE2N4jUr15_U6FED5xBK0g526KXvnh6Zv0omHlN4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/Zm90b3MtcHJlbWl1/bS9jb25jZXB0by1y/ZWRlcy1zb2NpYWxl/cy10ZWxlZm9uby1p/bnRlbGlnZW50ZS1t/YW5vXzIzLTIxNTAy/MDgyNjEuanBnP3Nl/bXQ9YWlzX2h5YnJp/ZCZ3PTc0MCZxPTgw" alt="Distribución" class="img_card">
-                    <h4>Distribución</h4>
-                    <p>
-                        Sistema de multicuentas (5 a 10 cuentas) distribuidas en: Instagram, TikTok, YouTube shorts y Facebook para predominar en tu nicho.
-                    </p>
-                </div>
-
-                <div class="card_service glassmorphism-gold">
-                    <img src="https://imgs.search.brave.com/5a9yYpuSAydAFD8j9FMGBaAUMIcn2vFnoQEK5pPApO8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/Zm90b3MtcHJlbWl1/bS9wcmltZXItcGxh/bm8taG9tYnJlLXF1/ZS10cmFiYWphLWNv/bXB1dGFkb3JhLXBv/cnRhdGlsLWZpbmFu/emFzLW8tY2VvLWdy/YWZpY28tYW5hbGlz/aXMtbmVnb2Npb3Mt/ZXN0cmF0ZWdpYV80/NTE2MzUtMjEzLmpw/Zz9zZW10PWFpc19o/eWJyaWQmdz03NDAm/cT04MA" alt="Medición" class="img_card">
-                    <h4>Medición</h4>
-                    <p>
-                        Seguimiento de métricas de exposición útil, consultas y oportunidades generadas, con optimización constante.
-                    </p>
-                </div>
+                <div aria-hidden class="carousel_group">
+                    <article class="card_service glassmorphism-gold">
+                        <img src="https://imgs.search.brave.com/8vkkgQ6y8tS-K5D6mqL9T19De3iNh1ADdUo3IsdMEWo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/aW5ub3ZhY2lvbmRp/Z2l0YWwzNjAuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIz/LzA5LzIyMTQzMTAy/L0VzdHJhdGVnaWEt/ZGlnaXRhbC5qcGc" alt="Estrategia" class="img_card" loading="lazy">
+                        <h4>Estrategia</h4>
+                        <p>
+                            Diseñamos un plan de omnipresencia enfocado en aumentar exposición frente a tu cliente ideal, con objetivos claros de crecimiento y retorno esperado (x2 o x3).
+                        </p>
+                    </article>
+                    <article class="card_service glassmorphism-gold">
+                        <img src="https://imgs.search.brave.com/bx288EeWRQywMeI0rRdwk8WX5RgftcWHvM-0Lv5x7RY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTgw/NTY4MDczMi9lcy9m/b3RvL292ZXItc2hv/dWxkZXItdmlldy1v/Zi1wcm9mZXNzaW9u/YWwtdmlkZW8tY2Ft/ZXJhLWZpbG1pbmct/YW4taW50ZXJ2aWV3/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz0yeWlXZnRHd0Rn/aTc0UncyYVUzRUVT/b21fVS0tX21DR0xy/ZGR5ak50REpRPQ" alt="Filmación" class="img_card" loading="lazy">
+                        <h4>Filmación</h4>
+                        <p>
+                            Producción de contenido orientada a generar presencia diaria, autoridad y ventas en tu negocio.
+                        </p>
+                    </article>
+                    <article class="card_service glassmorphism-gold">
+                        <img src="https://imgs.search.brave.com/GcAhBUxWK5n1IIJK4N9TEzjl16gTbVh06nbpVLMlsB0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZWku/ZXMvd3AtY29udGVu/dC91cGxvYWRzL2N1/cnNvLWRlLWVkaWNp/b24tZGUtdmlkZW8t/b25saW5lLW1vYmls/ZS5qcGc" alt="Edición" class="img_card" loading="lazy">
+                        <h4>Edición</h4>
+                        <p>
+                            Edición optimizada para volumen, retención y adaptación a cada plataforma, permitiendo escalar sin depender de un solo formato.
+                        </p>
+                    </article>
+                    <article class="card_service glassmorphism-gold" loading="lazy">
+                        <img src="https://imgs.search.brave.com/0hSbE2N4jUr15_U6FED5xBK0g526KXvnh6Zv0omHlN4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/Zm90b3MtcHJlbWl1/bS9jb25jZXB0by1y/ZWRlcy1zb2NpYWxl/cy10ZWxlZm9uby1p/bnRlbGlnZW50ZS1t/YW5vXzIzLTIxNTAy/MDgyNjEuanBnP3Nl/bXQ9YWlzX2h5YnJp/ZCZ3PTc0MCZxPTgw" alt="Distribución" class="img_card">
+                        <h4>Distribución</h4>
+                        <p>
+                            Sistema de multicuentas (5 a 10 cuentas) distribuidas en: Instagram, TikTok, YouTube shorts y Facebook para predominar en tu nicho.
+                        </p>
+                    </article>
+                    <article class="card_service glassmorphism-gold">
+                        <img src="https://imgs.search.brave.com/5a9yYpuSAydAFD8j9FMGBaAUMIcn2vFnoQEK5pPApO8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/Zm90b3MtcHJlbWl1/bS9wcmltZXItcGxh/bm8taG9tYnJlLXF1/ZS10cmFiYWphLWNv/bXB1dGFkb3JhLXBv/cnRhdGlsLWZpbmFu/emFzLW8tY2VvLWdy/YWZpY28tYW5hbGlz/aXMtbmVnb2Npb3Mt/ZXN0cmF0ZWdpYV80/NTE2MzUtMjEzLmpw/Zz9zZW10PWFpc19o/eWJyaWQmdz03NDAm/cT04MA" alt="Medición" class="img_card" loading="lazy">
+                        <h4>Medición</h4>
+                        <p>
+                            Seguimiento de métricas de exposición útil, consultas y oportunidades generadas, con optimización constante.
+                        </p>
+                    </article>
+                </div>                
             </div>
 
             <a href="#" target="_blank" class="btn">Quiero saber más</a>
@@ -416,8 +454,5 @@
 
 <!-- JS -->
 <script src="assets/js/main.js"></script>
-
-<!-- <script src="https://unpkg.com/lucide@latest"></script> -->
-
 </body>
 </html>
